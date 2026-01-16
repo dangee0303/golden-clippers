@@ -1,0 +1,584 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c0c0c0; /* subtle silver accent */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #c0c0c0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* HERO SECTION */
+.hero-barbershop {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("images/hero-barber.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-barbershop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* subtle overlay for depth */
+}
+
+.hero-text {
+margin: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-barbershop h1 {
+  font-family: 'lato', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero-barbershop p {
+  font-size: 20px;
+  margin-bottom: 35px;
+  color: #ccc;
+}
+
+/* BUTTONS */
+.btn {
+  background: #fff;
+  color: #111;
+  padding: 16px 36px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+}
+
+.btn:hover {
+  background: #c0c0c0;
+  color: #000;
+  box-shadow: 0 8px 16px rgba(192,192,192,0.2);
+}
+
+/* SERVICES PREVIEW */
+.services-preview {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.services-preview h2 {
+  font-family: 'lato', sans-serif;
+  font-size: 48px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.services-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-family: 'lato', sans-serif;
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: #fff;
+}
+
+.service-card p {
+  font-size: 15px;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* CTA SECTION */
+.hero-cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-cta h2 {
+  font-family: 'lato', sans-serif;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero-cta p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-barbershop h1 {
+    font-size: 40px;
+  }
+
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 15px 30px;
+  }
+}
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-family: 'lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c0c0c0; /* subtle silver accent */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #c0c0c0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* HERO SECTION */
+.hero-barbershop {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("images/hero-barber.jpg") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero-barbershop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* subtle overlay for depth */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-barbershop h1 {
+  font-family: 'lato', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero-barbershop p {
+  font-size: 20px;
+  margin-bottom: 35px;
+  color: #ccc;
+}
+
+/* BUTTONS */
+.btn {
+  background: #fff;
+  color: #111;
+  padding: 16px 36px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: 'lato', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+}
+
+.btn:hover {
+  background: #c0c0c0;
+  color: #000;
+  box-shadow: 0 8px 16px rgba(192,192,192,0.2);
+}
+
+/* SERVICES PREVIEW */
+.services-preview {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.services-preview h2 {
+  font-family: 'lato', sans-serif;
+  font-size: 48px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.services-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-family: 'lato', sans-serif;
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: #fff;
+}
+
+.service-card p {
+  font-size: 15px;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* CTA SECTION */
+.hero-cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-cta h2 {
+  font-family: 'lato', sans-serif;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero-cta p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-barbershop h1 {
+    font-size: 40px;
+  }
+
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 15px 30px;
+  }
+}
+
+/* ABOUT HERO */
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("images/about-hero.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  position: relative;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.about-hero h1 {
+  font-family: 'lato', sans-serif;
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* OUR STORY */
+.our-story {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.our-story h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.our-story p {
+  font-size: 16px;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* TEAM */
+.team {
+  padding: 80px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.team h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+}
+
+.team-member img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin: 15px 0 5px;
+}
+
+.team-member p {
+  font-size: 14px;
+  color: #ccc;
+  padding: 0 10px 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
