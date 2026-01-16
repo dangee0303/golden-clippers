@@ -27,13 +27,9 @@ body {
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
+  margin-left: 20px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
 
 .nav-links a {
   color: #fff;
@@ -68,7 +64,7 @@ body {
 .hero-barbershop {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url("images/hero-barber.jpg") center/cover no-repeat;
-  height: 100vh;
+  height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,15 +145,6 @@ margin: 50px;
   flex-wrap: wrap;
 }
 
-.service-card {
-  background: #1a1a1a;
-  border-radius: 14px;
-  overflow: hidden;
-  text-align: center;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-}
 
 .service-card:hover {
   transform: translateY(-8px);
@@ -254,18 +241,10 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-.logo {
-  font-family: 'lato', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 15px;
 }
 
 .nav-links a {
@@ -460,7 +439,7 @@ body {
   }
 
   .navbar {
-    padding: 15px 30px;
+    padding: 15px 20px;
   }
 }
 
@@ -571,14 +550,92 @@ body {
   padding: 0 10px 15px;
 }
 
+/* SERVICES HERO */
+.services-hero {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/services-hero.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.services-hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* SERVICES SECTION */
+.services-section {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.services-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SERVICE ITEM */
+.service-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30px 0;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.service-header span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.service-item p {
+  margin-top: 10px;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* ACTIVE NAV LINK */
+nav a.active {
+  color: #000;
+  font-weight: 700;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 36px;
+  .services-hero-content h2 {
+    font-size: 2.2rem;
   }
 
-  .team-grid {
+  .service-header {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 5px;
   }
 }
